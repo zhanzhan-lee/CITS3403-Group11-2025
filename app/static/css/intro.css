@@ -1,11 +1,33 @@
-.container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  text-align: center;
+.intro-body {
+  background-color: #f2e8cf;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+/* Force container to act full width on intro only */
+.intro-body .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.camera-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.camera-image {
+  width: 400px;
+  height: auto;
+}
+
+.viewfinder-image {
+  position: absolute;
+  top: 97px; /* Adjust these values */
+  left: 87px; /* to match the viewfinder area */
+  width: 225px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 h1 {
@@ -20,13 +42,13 @@ h1 {
   margin-bottom: 30px;
 }
 
-.button-group {
+.intro-body .button-group {
   margin-bottom: 40px;
   display: flex;
   justify-content: center;
 }
 
-.button-group button {
+.intro-body .button-group button {
   background-color: #6b705c;
   color: #fff;
   border: none;
@@ -38,15 +60,8 @@ h1 {
   margin: 0 auto;
 }
 
-.button-group button:hover {
+.intro-body .button-group button:hover {
   background-color: #b5838d;
-}
-
-.features {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .feature {
@@ -65,13 +80,6 @@ h1 {
   justify-content: center;
 }
 
-.feature-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
 .feature-icon {
   width: 50px;
   height: 50px;
@@ -83,18 +91,7 @@ h1 {
   font-weight: bold;
 }
 
-.intro-body {
-  background-color: #f2e8cf;
-  min-height: 100vh;
+body {
+  background-color: #f2e8cf !important;
   font-family: "Roboto", sans-serif;
-}
-
-.intro-image {
-  width: 250px;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 40px rgba(107, 112, 92, 0.2);
-  opacity: 0.95;
-  transition: opacity 0.3s ease-in-out;
 }
